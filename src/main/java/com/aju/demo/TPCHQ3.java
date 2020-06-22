@@ -45,8 +45,8 @@ public class TPCHQ3 {
 //        StreamTableEnvironment tEnv = StreamTableEnvironment.create(env);
 //        final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 //        BatchTableEnvironment btEnv = BatchTableEnvironment.create(env);
+
         final StreamExecutionEnvironment sEnv = StreamExecutionEnvironment.getExecutionEnvironment();
-//        final StreamExecutionEnvironment sEnv = StreamExecutionEnvironment.getExecutionEnvironment();
 //        StreamTableEnvironment stEnv = StreamTableEnvironment.create(sEnv);
 //        EnvironmentSettings es = EnvironmentSettings.newInstance().build();
 //        TableEnvironment tEnv = TableEnvironment.create(es);
@@ -61,13 +61,14 @@ public class TPCHQ3 {
 //        DataSet<SupplierTuple> supplier = TPCHDataSources.getSupplierDataSet(env);
 
         DataStream<CustomerTuple> d = TPCHDataSources.getCustomerTupleDataStream(sEnv);
-        d.print();
+//        DataStream
+//        Table customerTable = btEnv.fromDataSet(customer);
 
-        sEnv.execute();
+
+//        sEnv.execute();
 //        env.execute();
 
     }
-
 
 
 }

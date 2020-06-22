@@ -164,7 +164,6 @@ public class TPCHDataSources {
 //        });
 //        return data;
 //    }
-
     public static DataStream<CustomerTuple> getCustomerTupleDataStream(StreamExecutionEnvironment sEnv) {
 
         DataStream<String> rawData = sEnv.readTextFile(customerFilePath);
@@ -178,7 +177,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 CustomerTuple tmpTuple = new CustomerTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -209,7 +208,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 LineitemTuple tmpTuple = new LineitemTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -240,7 +239,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 NationTuple tmpTuple = new NationTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -271,7 +270,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 OrdersTuple tmpTuple = new OrdersTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -302,7 +301,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 PartsuppTuple tmpTuple = new PartsuppTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -333,7 +332,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 PartTuple tmpTuple = new PartTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -364,7 +363,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 RegionTuple tmpTuple = new RegionTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -396,7 +395,7 @@ public class TPCHDataSources {
                     throw new RuntimeException("Invalid line: " + line);
                 }
                 SupplierTuple tmpTuple = new SupplierTuple();
-                for(int i = 0; i < tokens.length; i++) {
+                for (int i = 0; i < tokens.length; i++) {
                     fields[i].setAccessible(true);
                     if (fields[i].getType() == String.class) {
                         fields[i].set(tmpTuple, tokens[i]);
@@ -413,9 +412,6 @@ public class TPCHDataSources {
         });
         return data;
     }
-
-
-
 
 
 }
