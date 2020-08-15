@@ -36,8 +36,8 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  */
 public class TPCHDataSources {
 
-    public static final String commonDataFilePath = "F:" + File.separator +
-            "Code" + File.separator + "RA" + File.separator + "tpchdata" + File.separator;
+    public static final String commonDataFilePath = "E:" + File.separator +
+            "Projects" + File.separator + "RA" + File.separator + "tpchdata" + File.separator;
     public static final String customerFilePath = commonDataFilePath + "customer.tbl";
     public static final String lineitemFilePath = commonDataFilePath + "lineitem.tbl";
     public static final String nationFilePath = commonDataFilePath + "nation.tbl";

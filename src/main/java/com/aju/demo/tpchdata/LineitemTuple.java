@@ -49,6 +49,11 @@ public class LineitemTuple {
     public LineitemTuple() {
     }
 
+    public long get_primaryKey() {
+//        return ((l_linenumber<<60)+(0x0FFFFFFFFFFFFFFFL&l_orderkey));
+        return l_orderkey * 10 + l_linenumber;
+    }
+
     public long getL_orderkey() {
         return l_orderkey;
     }
